@@ -7,12 +7,14 @@ public class BallBehaviour : MonoBehaviour
 {
     Rigidbody ball;
     Rigidbody player;
+    IPlayerController playerController;
 
     [SerializeField] int shootForce;
     public bool isBallActive = false;
 
     void Start()
     {
+        playerController = PlayerControllerFactory.playerController;
         ball = GetComponent<Rigidbody>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody>();
     }
@@ -31,7 +33,7 @@ public class BallBehaviour : MonoBehaviour
     {
         ball.transform.position = new Vector3(player.transform.position.x, player.transform.position.y + 1.1f, player.transform.position.z);
         
-        if(Input.GetKeyDown(KeyCode.UpArrow))
+        if(playerController.ShootBall())
         {
             isBallActive = true;
             ball.AddForce(new Vector3(player.velocity.x,shootForce,0), ForceMode.Impulse);

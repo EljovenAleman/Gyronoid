@@ -277,9 +277,9 @@ GameObject:
   - component: {fileID: 418122747}
   - component: {fileID: 418122746}
   - component: {fileID: 418122745}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftWall
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -933,9 +933,9 @@ GameObject:
   - component: {fileID: 1315750783}
   - component: {fileID: 1315750782}
   - component: {fileID: 1315750781}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightWall
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1014,6 +1014,50 @@ Transform:
   m_Father: {fileID: 891218746}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1423498513
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1423498515}
+  - component: {fileID: 1423498514}
+  m_Layer: 0
+  m_Name: GameLogic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1423498514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1423498513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cedf8087b89ab164a88c3fdd96af2d36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameWon: 0
+--- !u!4 &1423498515
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1423498513}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.3758074, y: 3.9882493, z: 65.453415}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1924007470
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1090,10 +1134,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1806914995476155650, guid: 83b8eecb18d038d478433fdf64a3a438,
+        type: 3}
+      propertyPath: rotationResetSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1806914995476155651, guid: 83b8eecb18d038d478433fdf64a3a438,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 1806914995476155653, guid: 83b8eecb18d038d478433fdf64a3a438,
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 1806914995476155653, guid: 83b8eecb18d038d478433fdf64a3a438,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1806914995476155775, guid: 83b8eecb18d038d478433fdf64a3a438,
         type: 3}
