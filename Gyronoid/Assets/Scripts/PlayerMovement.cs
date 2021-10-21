@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
         {
             
             player.AddForce(new Vector3(-1 * moveSpeed, 0, 0));
-            //player.AddTorque(new Vector3(0, 0, 3));
+            
             player.rotation = Quaternion.Euler(rotationVector * 1);
 
         }
@@ -30,14 +30,14 @@ public class PlayerMovement : MonoBehaviour
         {
             
             player.AddForce(new Vector3(1 * moveSpeed, 0, 0));
-            //player.AddTorque(new Vector3(0, 0, -3));
+           
             player.rotation = Quaternion.Euler(rotationVector * -1);
         }
         else
         {
             player.velocity = Vector3.zero;
             
-            player.rotation = Quaternion.FromToRotation(new Vector3(player.rotation.x, player.rotation.y, player.rotation.z), new Vector3(0, 0, 0));
+            player.rotation = Quaternion.FromToRotation(new Vector3(player.rotation.x, player.rotation.y, player.rotation.z), Vector3.zero);
 
         }
     }
