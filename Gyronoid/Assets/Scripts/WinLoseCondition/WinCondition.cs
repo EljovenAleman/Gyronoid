@@ -18,7 +18,7 @@ public class WinCondition : MonoBehaviour
     {
         if(counter == 0)
         {
-            Debug.Log("level won");
+            gameWon = true;
         }
     }
 }

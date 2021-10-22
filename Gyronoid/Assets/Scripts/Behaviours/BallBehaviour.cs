@@ -8,12 +8,17 @@ public class BallBehaviour : MonoBehaviour
     Rigidbody ball;
     Rigidbody player;
     IPlayerController playerController;
+    WinCondition winCondition;
+    LoseCondition loseCondition;
 
     [SerializeField] int shootForce;
     public bool isBallActive = false;
 
     void Start()
     {
+        winCondition = FindObjectOfType<WinCondition>();
+        loseCondition = FindObjectOfType<LoseCondition>();
+
         playerController = PlayerControllerFactory.playerController;
         ball = GetComponent<Rigidbody>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody>();
@@ -22,7 +27,15 @@ public class BallBehaviour : MonoBehaviour
     
     void Update()
     {
-        if(isBallActive == false)
+        if(winCondition.gameWon)
+        {
+            ball.velocity = Vector3.zero;
+        }
+        if(loseCondition.gameLost)
+        {
+            ball.transform.position = new Vector3(100, 0, 0);
+        }
+        else if(isBallActive == false)
         {
             ball.velocity = Vector3.zero;
             MoveWithPlayerUntilShooted();

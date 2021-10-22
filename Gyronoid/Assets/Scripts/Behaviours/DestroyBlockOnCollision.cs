@@ -8,6 +8,6 @@ public class DestroyBlockOnCollision : MonoBehaviour
     {
         Destroy(gameObject);
         WinCondition.counter--;
-        Debug.Log(WinCondition.counter);
+        
     }
 }
