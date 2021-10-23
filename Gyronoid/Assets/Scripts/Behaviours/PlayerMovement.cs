@@ -37,16 +37,18 @@ public class PlayerMovement : MonoBehaviour
         {
             if (playerController.GoLeft() && transform.position.x > -7)
             {
+                player.position = new Vector3(player.transform.position.x - 0.1f * moveSpeed, player.transform.position.y, player.transform.position.z);
 
-                player.AddForce(new Vector3(-1 * moveSpeed, 0, 0));
+                //player.AddForce(new Vector3(-1 * moveSpeed, 0, 0));
 
                 player.rotation = Quaternion.Euler(rotationVector * 1);
 
             }
             else if (playerController.GoRight() && transform.position.x < 7)
             {
+                player.position = new Vector3(player.transform.position.x + 0.1f * moveSpeed, player.transform.position.y, player.transform.position.z);
 
-                player.AddForce(new Vector3(1 * moveSpeed, 0, 0));
+                //player.AddForce(new Vector3(1 * moveSpeed, 0, 0));
 
                 player.rotation = Quaternion.Euler(rotationVector * -1);
             }

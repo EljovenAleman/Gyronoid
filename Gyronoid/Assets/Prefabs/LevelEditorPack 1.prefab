@@ -2743,11 +2743,6 @@ PrefabInstance:
       propertyPath: rotationResetSpeed
       value: 100
       objectReference: {fileID: 0}
-    - target: {fileID: 1806914995476155651, guid: 83b8eecb18d038d478433fdf64a3a438,
-        type: 3}
-      propertyPath: m_Constraints
-      value: 60
-      objectReference: {fileID: 0}
     - target: {fileID: 1806914995476155653, guid: 83b8eecb18d038d478433fdf64a3a438,
         type: 3}
       propertyPath: m_Name

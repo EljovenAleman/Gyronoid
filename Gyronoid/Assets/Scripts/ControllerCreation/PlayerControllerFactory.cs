@@ -4,7 +4,7 @@ using UnityEngine;
 
 public static class PlayerControllerFactory
 {
-    //public static IPlayerController playerController = new PCPlayerController();
+    public static IPlayerController playerController = new PCPlayerController();
 
-    public static IPlayerController playerController = new MobilePlayerController();
+    //public static IPlayerController playerController = new MobilePlayerController();
 }
