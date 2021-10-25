@@ -17,12 +17,17 @@ public class BallReposition : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other)
-    {        
+    {
+        RepositionBall();  
+    }
+
+    public void RepositionBall()
+    {
         ball.isBallActive = false;
-        if(loseCondition.counter > 1)
+        if (loseCondition.counter > 1)
         {
             Destroy(livesSpheres[loseCondition.counter - 2]);
         }
-        loseCondition.counter--;        
+        loseCondition.counter--;
     }
 }
