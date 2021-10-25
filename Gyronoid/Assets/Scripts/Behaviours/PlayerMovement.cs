@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    float offset = 0;
+
     Rigidbody player;
+    Renderer playerShader;
 
     public bool inControl = true;
 
@@ -19,7 +22,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] int rotationResetSpeed;
     
     void Start()
-    {        
+    {
+        playerShader = GetComponent<Renderer>();
         playerController = PlayerControllerFactory.playerController;
         player = GetComponent<Rigidbody>();
         originalRotation = player.rotation;
@@ -28,6 +32,9 @@ public class PlayerMovement : MonoBehaviour
     
     void FixedUpdate()
     {
+        playerShader.material.SetTextureOffset("_MainTex", new Vector2(offset, 0));
+        offset += 0.01f; 
+
         if(Input.touchCount > 0)
         {
             Debug.Log(Input.touches[0].position);
