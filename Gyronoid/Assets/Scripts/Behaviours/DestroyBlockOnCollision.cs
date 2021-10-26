@@ -15,7 +15,7 @@ public class DestroyBlockOnCollision : MonoBehaviour
     {
         
         blockHealth.health--;
-        Debug.Log(blockHealth.health);
+        
         
         if(blockHealth.health <= 0)
         {

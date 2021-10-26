@@ -26,7 +26,7 @@ public class ColorChanger : MonoBehaviour
     public void ChangeColor()
     {
         
-        Debug.Log("color should Change");
+        
         //blockRenderer.material.color = Color.white;
         blockRenderer.material.SetTexture("_MainTex", textureList[blockHealth.health]);
         //blockRenderer.material.SetColor("_MainTex", new Color(248, 60, 1));

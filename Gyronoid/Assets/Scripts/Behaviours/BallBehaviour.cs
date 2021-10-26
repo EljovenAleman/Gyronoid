@@ -7,7 +7,9 @@ public class BallBehaviour : MonoBehaviour
 {
     Rigidbody ball;
     Rigidbody player;
+
     IPlayerController playerController;
+
     WinCondition winCondition;
     LoseCondition loseCondition;
 
